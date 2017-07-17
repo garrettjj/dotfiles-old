@@ -29,8 +29,9 @@ font pango:DejaVu Sans Mono 8
 
 exec --no-startup-id setxkbmap -option caps:super
 exec --no-startup-id xrdb -merge /home/garrett/.Xresources 
-exec --no-startup-id nm-applet
 exec --no-startup-id nightshift -d
+#exec --no-startup-id run_keybase
+exec --no-startup-id nm-applet
 exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper.png
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -53,6 +54,7 @@ bindsym $mod+Shift+BackSpace	exec reboot
 
 # Browser
 bindsym $mod+w			exec --no-startup-id $browser
+bindsym $mod+Shift+w		exec --no-startup-id google-chrome-stable
 
 bindsym $mod+r			exec $term -e ranger
 bindsym $mod+Shift+r		restart
