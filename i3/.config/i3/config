@@ -9,12 +9,12 @@
 #Needed for i3-gaps
 hide_edge_borders both
 for_window [class="^.*"] border pixel 0 
-gaps inner 15 
-gaps outer 15
+gaps inner 10
+gaps outer 10
 exec --no-startup-id xcompmgr
 
 # Basic settings
-set $mod Mod1
+set $mod Mod4
 set $term urxvt
 set $browser firefox-developer
 set $mail thunderbird
@@ -82,18 +82,21 @@ bindsym $mod+z			gaps outer current plus 5
 bindsym $mod+Shift+z		gaps outer current minus 5
 
 bindsym $mod+t			split toggle
-bindsym $mod+Shift+t		gaps inner all set 15; gaps outer all set 15
+bindsym $mod+Shift+t		gaps inner all set 10; gaps outer all set 10
 # Lock Screen
-bindsym Mod4+l			exec ~/.config/i3/lock.sh
+bindsym Mod1+l			exec ~/.config/i3/lock.sh
 bindsym $mod+Shift+x		exec shutdown now
+
+bindsym Print exec "scrot -e 'mv $f ~/Screenshots'"
+bindsym $mod+Print exec "scrot -ue 'mv $f ~/Screenshots'"
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -fn 'DejaVu Sans Mono-10' -nb '#111111' -nf '#c2c2b0' -sb '#6688aa' -sf '#181818'"
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'DejaVu Sans Mono-10' -nb '#111111' -nf '#c2c2b0' -sb '#6688aa' -sf '#181818'
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -fn 'DejaVu Sans Mono-10' -nb '#111111' -nf '#c2c2b0' -sb '#6688aa' -sf '#181818'"
 
 # change focus
 #bindsym $mod+j focus left
