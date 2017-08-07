@@ -181,8 +181,8 @@ set $ws2 "2: "
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
+set $ws6 "6: "
+set $ws7 "7: "
 set $ws8 "8: "
 set $ws9 "9: "
 set $ws10 "10"
@@ -226,7 +226,15 @@ bar {
 	#This status command requires bumblebee-status. You must change it to your desired settings!
 	#	https://github.com/tobi-wan-kenobi/bumblebee-status
 	status_command ~/.config/bumblebee-status/bumblebee-status -m pasink pasource battery nic pacman disk datetime -p nic.exclude=lo,vibr,docker,vboxnet,veth,vmnet disk.path=/home datetime.format="%a, %b %d, %Y at %I:%M %p" -t sourcerer-powerline
+
 	position top
+	colors{
+		focused_workspace  #81818f #8f6f8f #111111
+        	active_workspace   #111111 #111111 #c2c2b0
+        	inactive_workspace #181818 #111111 #c2c2b0
+        	urgent_workspace   #aa4450 #aa4450 #c2c2b0
+        	#binding_mode       #2f343a #900000 #ffffff
+	}
 	}
 
 # you need to bind some keys like volume and brightness

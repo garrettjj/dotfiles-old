@@ -1,0 +1,47 @@
+{
+	"icons": [ "awesome-fonts" ],
+	"defaults": {
+		"warning": {
+			"fg": "#111111",
+			"bg": "#ff9800"
+		},
+		"critical": {
+			"fg": "#111111",
+			"bg": "#AA4450"
+		},
+		"default-separators": false,
+		"separator-block-width": 0
+	},
+	"cycle": [
+		{
+			"fg": "#c2c2b0",
+			"bg": "#222222"
+		},
+		{
+			"fg": "#111111",
+			"bg": "#8f6f8f"
+		}
+	],
+	"dnf": {
+		"good": {
+			"fg": "#002b36",
+			"bg": "#859900"
+		}
+	},
+	"battery": {
+		"charged": {
+			"fg": "#1d2021",
+			"bg": "#b8bb26"
+		},
+		"AC": {
+			"fg": "#c2c2b0",
+			"bg": "#222222"
+		}
+	},
+  "bluetooth": {
+      "ON": {
+			    "fg": "#111111",
+			    "bg": "#6688aa"
+      }
+  }
+}
