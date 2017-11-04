@@ -32,6 +32,7 @@ exec --no-startup-id xrdb -merge /home/garrett/.Xresources
 exec --no-startup-id nightshift -d
 #exec --no-startup-id run_keybase
 exec --no-startup-id nm-applet
+exec --no-startup-id eval `ssh-agent -s`
 exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper.png
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -89,10 +90,13 @@ bindsym $mod+Shift+t		gaps inner all set 10; gaps outer all set 10
 bindsym Mod1+l			exec ~/.config/i3/lock.sh
 bindsym $mod+Shift+x		exec shutdown now
 
-bindsym --release Print exec "scrot -e 'mv $f ~/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png"
-bindsym --release $mod+Print exec "scrot -ue 'mv $f ~/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png'"
+bindsym --release Print exec exec "scrot '%Y-%m-%d-%H-%M-%S.png' -e 'mv $f ~/Pictures/Screenshots/'"
+bindsym --release $mod+Print exec exec "scrot '%Y-%m-%d-%H-%M-%S.png' -e 'mv $f ~/Pictures/Screenshots/'"
+ 
+bindsym $mod+p 			exec "scrot '%Y-%m-%d-%H-%M-%S.png' -e 'mv $f ~/Pictures/Screenshots/'"
+bindsym $mod+Shift+p 			exec "scrot '%Y-%m-%d-%H-%M-%S.png' -u -e 'mv $f ~/Pictures/Screenshots/'"
 
-bindsym $mod+p 			exec "scrot -e ~/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png"
+#bindsym $mod+p exec rofi -show run -terminal urxvt -lines 7 -eh 3 -width 100 -padding 200 -opacity 80 -bw 0 -bc "#000000" -bg "#000000" -hlbg "#222222" -hlfg "#c79595" -fg "#ffffff" -font "Terminus 15"
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
