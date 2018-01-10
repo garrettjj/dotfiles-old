@@ -1,50 +1,50 @@
-! URxvt settings
-URxvt.font: xft:SauceCodePro Nerd Font:size=10,style=Regular, xft:PowerlineSymbols, xft:FontAwesome
+! /-----------------------\
+! | Created by fs0ciety   |
+! | https://fsociety.info |
+! | 2016                  |
+! \-----------------------/
 
-URxvt.scrollBar: false
-URxvt.color12: rgb:5c/5c/ff
-!
-!   ██████  ██████  ██   ██ ██████  █████   █████  ██████  █████  ██████
-!  ██░░░░  ██░░░░██░██  ░██░░██░░████░░░██ ██░░░██░░██░░████░░░██░░██░░██
-! ░░█████ ░██   ░██░██  ░██ ░██ ░░░██  ░░ ░███████ ░██ ░░░███████ ░██ ░░
-!  ░░░░░██░██   ░██░██  ░██ ░██   ░██   ██░██░░░░  ░██   ░██░░░░  ░██   
-!  ██████ ░░██████ ░░██████░███   ░░█████ ░░██████░███   ░░██████░███   
-! ░░░░░░   ░░░░░░   ░░░░░░ ░░░     ░░░░░   ░░░░░░ ░░░     ░░░░░░ ░░░   
-!  r  e  a  d     c  o  d  e     l  i  k  e     a     w  i  z  a  r  d 
-!
-! sourcerer by xero harrison (http://sourcerer.xero.nu)
-!  ├─ based on sorcerer by Jeet Sukumaran (http://jeetworks.org)
-!  └─ based on mustang by Henrique C. Alves (hcarvalhoalves@gmail.com)
+#include </home/garrett/.termcolors/synthwave>
 
-! █▓▒░ scorcerer colors
-*.foreground:   #c2c2b0
-*.background:   #222223
-*.cursorColor:  #c2c2b0
-! black
-*.color0:       #111111
-*.color8:       #181818
-! red
-*.color1:       #aa4450
-*.color9:       #ff6a6a
-! green
-*.color2:       #719611
-*.color10:      #b1d631
-! yellow
-*.color3:       #ff9800
-*.color11:      #87875f
-! blue
-*.color4:       #6688aa
-*.color12:      #90b0d1
-! magenta
-*.color5:       #8f6f8f
-*.color13:      #8181a6
-! cyan
-*.color6:       #528b8b
-*.color14:      #87ceeb
-! white
-*.color7:       #d3d3d3
-*.color15:      #c1cdc1
-! stylized
-*.colorIT:      #719611
-*.colorBD:      #d3d3d3
-*.colorUL:      #528b8b
+
+Xft.dpi:                        109
+URxvt*termName:                 rxvt-256color
+URxvt.depth:                    32
+URxvt*lineSpace:                1
+URxvt.letterSpace:              0
+URxvt.iso14755:                 false
+URxvt.iso14755_52:              false
+URxvt*geometry:                 65x17
+URxvt*loginShell:               true
+URxvt.internalBorder:           35
+URxvt.perl-ext-common:          default,clipboard
+URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
+URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
+URxvt.clipboard.autocopy:       true
+
+! Colors
+*background:   bg
+*foreground:   fg
+*cursorColor:  cyn
+
+*color0:      blk
+*color8:      bblk
+*color1:      red
+*color9:      red
+*color2:      grn
+*color10:     grn
+*color3:      ylw
+*color11:     ylw
+*color4:      blu
+*color12:     blu
+*color5:      mag
+*color13:     mag
+*color6:      cyn
+*color14:     cyn
+*color7:      wht
+*color15:     wht
+! Fonts
+URxvt.font: xft:SauceCodePro Nerd Font Mono:pixelsize=11,xft:font-linux:pixelsize=11
+URxvt*scrollBar:        false
+URxvt*scrollBar_right:        true
+URxvt*scrollColor:        #000000

@@ -1,7 +1,7 @@
 " Core settings
 set number
-set laststatus=2
-set showtabline=2
+set laststatus=0
+"set showtabline=2
 
 " Pathogen
 execute pathogen#infect()
@@ -11,19 +11,17 @@ filetype plugin indent on
 " Theming
 syntax enable
 set background=dark
-"colorscheme solarized
-colorscheme sourcerer
+colorscheme synthwave
 set t_Co=256
+hi Normal guibg=NONE ctermbg=NONE
 
-
-" SimpleNote usage
 "let g:SimplenoteUsername = DELETED
 " let g:SimplenotePassword = DELETED
 let g:SimplenoteSingleWindow=1
 
 " Airline settings
-let g:airline_powerline_fonts = 1
-let g:airline_theme = "base16"
+"let g:airline_powerline_fonts = 1
+"let g:airline_theme = "lucius"
 
 " Python settings
 let g:pymode_python = 'python3'
